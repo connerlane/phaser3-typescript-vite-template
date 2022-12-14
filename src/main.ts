@@ -1,7 +1,8 @@
 import Phaser from 'phaser'
 
-import MountainScene from './MountainScene'
-import MyPipeline from './MyPipeline'
+// import ShittyMountainScene from './ShittyMountainScene'
+import MatterMountainScene from './MatterMountainScene'
+// import MyPipeline from './MyPipeline'
 
 const config: Phaser.Types.Core.GameConfig = {
 	type: Phaser.WEBGL,
@@ -9,12 +10,9 @@ const config: Phaser.Types.Core.GameConfig = {
 	width: 960,
 	height: 540,
 	physics: {
-		default: 'arcade',
-		arcade: {
-			gravity: { y: 200 },
-		},
-	},
-	scene: [MountainScene],
+        default: 'matter'
+    },
+	scene: [MatterMountainScene],
 	// pipeline:{'MyPipeline': MyPipeline as Phaser.Renderer.WebGL.WebGLPipeline}
 }
 
